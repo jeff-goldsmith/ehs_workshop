@@ -1,0 +1,6 @@
+---
+title: "EHS workshop"
+---
+
+This site is intended to give some ideas about best practices for building a web presence, managing a website, and other issues. It was developed at almost the very last minute, which is highly not recommended; as such, it doesn't do many of the things it suggests.
+

@@ -1,7 +1,7 @@
-name: "JSM"
+name: "EHS"
 output_dir: "."
 navbar:
-  title: "JSM 2019"
+  title: "EHS Workshop"
   left:
     - text: "Home"
       href: index.html
