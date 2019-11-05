@@ -2,15 +2,36 @@
 title: "Content"
 ---
 
+What should you put on your website, especially the landing page? 
 
-Landing pages
+Always check examples:
 
+* [Emily Zabor](https://www.emilyzabor.com)
+* [Jeff Leek](http://jtleek.com)
+* [Hadley Wickham](http://hadley.nz)
+* [Jenna Krall](http://jennakrall.com)
+* [Lizzy Gibson](https://lizzyagibson.github.io)
+* [Marianthi](https://marianthi.github.io/makLAB.github.io/)
 
-can go nuts
+Some takeaways:
 
+* Name / title / affiliation
+* Brief intro / bio
+* Pointers to projects / papers
+* Contact info
 
+Don't forget to steal things! That's how websites are made. For example, I like the picture structure Emily and Lizzy used, and stole that to [embed a picture of Ted](about.html).
 
-what about other stuff:
+Most of the previous examples were structured in roughly the same way, but you can go all Web 2.0 if you want:
 
+* [Emi Tanaka](https://emitanaka.org) and her [showcase](https://emitanaka.org/showcase/)
+* [Alison Hill](https://alison.rbind.io)
+
+They have blogdown references [here](https://emitanaka.rbind.io/post/2018-05-blogdowntutorial/) and [here](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/)
+
+What about a deeper level of content? Here's what Hadley himself tweeted:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Some advice on managing your online presence if you&#39;re applying for a job or scholarship, based on my experiences reviewing rstudio::conf scholarship applications (results out soon):</p>&mdash; Hadley Wickham (@hadleywickham) <a href="https://twitter.com/hadleywickham/status/1189971594778681344?ref_src=twsrc%5Etfw">October 31, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+(This is also relevant for [git stuff](git_stuff.html).)
+
