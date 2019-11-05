@@ -1,6 +1,14 @@
 ---
-title: "EHS workshop"
+title: "Findability"
 ---
 
-This site is intended to give some ideas about best practices for building a web presence, managing a website, and other issues. It was developed at almost the very last minute, which is highly not recommended; as such, it doesn't do many of the things it suggests.
+How-to + pros/cons/necessary or not for buying a domain name.
 
+Advice on how to make our websites more “findable” in Google
+
+-- buy a domain name
+-- not relevant, but maybe add google analytics?
+
+
+
+https://stackoverflow.com/questions/41376989/how-to-include-google-analytics-in-an-rmarkdown-generated-github-page†
