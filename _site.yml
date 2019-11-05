@@ -1,0 +1,25 @@
+name: "JSM"
+output_dir: "."
+navbar:
+  title: "JSM 2019"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Topics"
+      menu:
+        - text: "Findable websites"
+          href: findable_websites.html
+        - text: "Content"
+          href: content.html
+        - text: "HTML and CSS"
+          href: html_and_css.html
+        - text: "Git stuff"
+          href: git_stuff.html
+  right:
+    - text: "About"
+      href: about.html
+    - icon: fa-github fa-lg
+      href: http://github.com/jeff-goldsmith/ehs_workshop
+output:
+  html_document:
+    theme: cosmo

@@ -1,0 +1,18 @@
+---
+title: "About This Website"
+---
+
+
+<img src="images/ted.jpg" style="width:35%; border:10px solid; margin-left: 20px" align="right">
+
+This is an [R Markdown website](http://rmarkdown.rstudio.com/rmarkdown_websites.html), created by [Jeff Goldsmith](http://jeffgoldsmith.com) for an EHS workshop on website and online presence.
+
+There isn't a lot more to say; so here is a picture of my cat, Ted.
+
+<br>
+
+the html for embedding this image is
+
+```{html}
+<img src="images/ted.jpg" style="width:35%; border:10px solid; margin-left: 20px" align="right">
+```
