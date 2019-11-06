@@ -2,13 +2,45 @@
 title: "Findability"
 ---
 
-How-to + pros/cons/necessary or not for buying a domain name.
+## Should you buy a domain name?
 
-Advice on how to make our websites more “findable” in Google
+Probably, yeah. If you're happy with your github id, then maybe not. But otherwise, you have $10 and an hour or two to figure this out, so why not?
 
--- buy a domain name
--- not relevant, but maybe add google analytics?
+## Setting up a domain name
+
+There's a lot about domain names that you don't really have to understand. But the short story is: a domain name is an easy-to-remember shorthand that points to a specific IP address, and that domain name + IP address has to be kept track of by the **Internet**.
+
+My recommendation is to buy the domain name / registration via some company (I've used namecheap for a while).
+
+Then follow the steps in an online tutorial, like:
+
+* [this one](https://blog.brooke.science/posts/custom-domain-hosting-with-github-and-namecheap/)
+* or [this one](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages)
+* or [this one](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain) (which is really the worst)
+
+This gets kinda scary, if I'm honest. There are almost certainly steps you won't understand, and it can take a while for the **Internet** to update the domain + IP mapping -- and during that time it can seem like you broke your whole page. But it basically works, and once it's in place you don't have to worry anymore. 
 
 
+## Making pages findable
 
-https://stackoverflow.com/questions/41376989/how-to-include-google-analytics-in-an-rmarkdown-generated-github-page†
+Well, first buy a domain name.
+
+After that, a few tips:
+
+* Give your page a relevant title
+* Make sure your content is up-to-date
+* Link to your page from other pages (GitHub; Google Scholar; CUMC, if you can)
+
+
+## Maybe use google analytics?
+
+This doesn't have to do with findability, but it's maybe helpful -- google analytics can provide insight into how much traffic you get, where people go, etc. 
+
+This [tutorial](https://stackoverflow.com/questions/41376989/how-to-include-google-analytics-in-an-rmarkdown-generated-github-page) helps.
+
+I set this up for [p8105.com](https://p8105.com) recently. After creating an analytics account, the steps were to 
+
+* copy the necessary code into `header.html`
+* modify the `_site.yml` to include that in the header for every page
+
+There's more about `header.html` in [HTML and CSS](html_and_css.html).

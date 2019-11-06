@@ -86,6 +86,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -322,10 +323,43 @@ $(document).ready(function () {
 </div>
 
 
-<p>How-to + pros/cons/necessary or not for buying a domain name.</p>
-<p>Advice on how to make our websites more “findable” in Google</p>
-<p>– buy a domain name – not relevant, but maybe add google analytics?</p>
-<p><a href="https://stackoverflow.com/questions/41376989/how-to-include-google-analytics-in-an-rmarkdown-generated-github-page" class="uri">https://stackoverflow.com/questions/41376989/how-to-include-google-analytics-in-an-rmarkdown-generated-github-page</a>†</p>
+<div id="should-you-buy-a-domain-name" class="section level2">
+<h2>Should you buy a domain name?</h2>
+<p>Probably, yeah. If you’re happy with your github id, then maybe not. But otherwise, you have $10 and an hour or two to figure this out, so why not?</p>
+</div>
+<div id="setting-up-a-domain-name" class="section level2">
+<h2>Setting up a domain name</h2>
+<p>There’s a lot about domain names that you don’t really have to understand. But the short story is: a domain name is an easy-to-remember shorthand that points to a specific IP address, and that domain name + IP address has to be kept track of by the <strong>Internet</strong>.</p>
+<p>My recommendation is to buy the domain name / registration via some company (I’ve used namecheap for a while).</p>
+<p>Then follow the steps in an online tutorial, like:</p>
+<ul>
+<li><a href="https://blog.brooke.science/posts/custom-domain-hosting-with-github-and-namecheap/">this one</a></li>
+<li>or <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages">this one</a></li>
+<li>or <a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain">this one</a> (which is really the worst)</li>
+</ul>
+<p>This gets kinda scary, if I’m honest. There are almost certainly steps you won’t understand, and it can take a while for the <strong>Internet</strong> to update the domain + IP mapping – and during that time it can seem like you broke your whole page. But it basically works, and once it’s in place you don’t have to worry anymore.</p>
+</div>
+<div id="making-pages-findable" class="section level2">
+<h2>Making pages findable</h2>
+<p>Well, first buy a domain name.</p>
+<p>After that, a few tips:</p>
+<ul>
+<li>Give your page a relevant title</li>
+<li>Make sure your content is up-to-date</li>
+<li>Link to your page from other pages (GitHub; Google Scholar; CUMC, if you can)</li>
+</ul>
+</div>
+<div id="maybe-use-google-analytics" class="section level2">
+<h2>Maybe use google analytics?</h2>
+<p>This doesn’t have to do with findability, but it’s maybe helpful – google analytics can provide insight into how much traffic you get, where people go, etc.</p>
+<p>This <a href="https://stackoverflow.com/questions/41376989/how-to-include-google-analytics-in-an-rmarkdown-generated-github-page">tutorial</a> helps.</p>
+<p>I set this up for <a href="https://p8105.com">p8105.com</a> recently. After creating an analytics account, the steps were to</p>
+<ul>
+<li>copy the necessary code into <code>header.html</code></li>
+<li>modify the <code>_site.yml</code> to include that in the header for every page</li>
+</ul>
+<p>There’s more about <code>header.html</code> in <a href="html_and_css.html">HTML and CSS</a>.</p>
+</div>
 
 
 
