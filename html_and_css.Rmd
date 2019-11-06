@@ -10,6 +10,8 @@ Rmd has syntax for embedding images, and this works for several image types. Her
 ![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
 ```
 
+![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+
 This only gets you so far in terms of customization. I generally use HTML for anything fancier than this. For example, this is the code I used to embed Ted in the [about page](about.html):
 
 
