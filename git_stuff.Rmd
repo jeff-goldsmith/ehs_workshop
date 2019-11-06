@@ -2,9 +2,40 @@
 title: "Git Stuff"
 ---
 
+Everyone is using git + github, right? 
+
+## What is git for?
+
+So the question is, what should you use git for, and what should be on github? My answer: everything and everything. 
+
+I use a template for basically every new project, and set that up using [projectr](https://github.com/jeff-goldsmith/projectr). By default, this has folders for `analysis`, `data`, `drafts`, `results`, and `sources`. There's also a readme and a .gitignore, which tries to be sure that data don't end up on github's servers. Often, I don't even store the data in the same repo, but instead use a symbolic link to the repo. (I think there's a good reason for this, involving git's behavior for symbolic links, but I don't remember anymore.)
+
+You don't have to use GH for this, and maybe you won't -- even still, I like to have the sae structure across projects, and end up pushing to GH most of the time. Many of my projects are private repos, at least initially. 
+
+Don't forget -- for at least some projects, you can / should fancy up public repos (depending on what you want to do with your life).
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Some advice on managing your online presence if you&#39;re applying for a job or scholarship, based on my experiences reviewing rstudio::conf scholarship applications (results out soon):</p>&mdash; Hadley Wickham (@hadleywickham) <a href="https://twitter.com/hadleywickham/status/1189971594778681344?ref_src=twsrc%5Etfw">October 31, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 
-What to make public / private on GitHub, and at what stage to make projects public
+## Using git in RStudio
+
+For a long time I had an external git client, but almost all my work is in R and managed via an RProject, so I've almost completely shifted to RStudio's git "client". Also, since I create repos all the friggin time now, an external client is largely not manageable. 
+
+A couple of points:
+
+* When I'm using `projectr`, the last step I use is to open the readme and copy the `usethis::use_github()` command. This creates a repo on GH and takes care of the linking.
+* When I'm not using `projectr`, I often use a "GitHub first" approach to creating the repo: create on GH, then create a new RProject from version control. 
+
+Some steps for the second approach are [here](https://p8105.com/git.html).
+
+The RStudio client is a bit stripped down, but for personal use or small collaborations it's basically fine. For larger projects / big team efforts, I might stick with an external client. 
 
 
-Version Control / Git in R studio
+## Using git to go crazy
+
+It can help to:
+
+* Know a bit about git on the command line
+* Peruse the `git2r` and `gh` packages
+
+This stuff is mostly helpful for the kind of work that a stripped-down client can't do. 
