@@ -4,14 +4,16 @@ title: "Content"
 
 What should you put on your website, especially the landing page? 
 
+## Examples
+
 Always check examples:
 
 * [Emily Zabor](https://www.emilyzabor.com)
 * [Jeff Leek](http://jtleek.com)
-* [Hadley Wickham](http://hadley.nz)
-* [Jenna Krall](http://jennakrall.com)
 * [Lizzy Gibson](https://lizzyagibson.github.io)
 * [Marianthi](https://marianthi.github.io/makLAB.github.io/)
+* [Hadley Wickham](http://hadley.nz)
+* [Jenna Krall](http://jennakrall.com)
 
 Some takeaways:
 
@@ -20,7 +22,11 @@ Some takeaways:
 * Pointers to projects / papers
 * Contact info
 
-Don't forget to steal things! That's how websites are made. For example, I like the picture structure Emily and Lizzy used, and stole that to [embed a picture of Ted](about.html).
+Some choices:
+
+* All-in-one landing, or short intro?
+* Picture? Gif? Nothing? 
+* Aesthetics ...
 
 Most of the previous examples were structured in roughly the same way, but you can go all Web 2.0 if you want:
 
@@ -28,6 +34,16 @@ Most of the previous examples were structured in roughly the same way, but you c
 * [Alison Hill](https://alison.rbind.io)
 
 They have blogdown references [here](https://emitanaka.rbind.io/post/2018-05-blogdowntutorial/) and [here](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/)
+
+
+## Random polishing tips
+
+You can make changes to styling -- we'll see more on that soon. 
+
+You can add an icon! Make a little square image, go to [favicon.cc](favicon.cc) to convert it to a .ico, and put it in the directory. You can also create a apple-touch-icon.png, and put it in there as well. 
+
+
+## Deeper content / presence
 
 What about a deeper level of content? Here's what Hadley himself tweeted:
 
