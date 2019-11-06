@@ -86,6 +86,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -322,12 +323,97 @@ $(document).ready(function () {
 </div>
 
 
-<p>Information/examples of how to better incorporate images into our websites. In Data Science we learned a little bit of this, but it was very simplified, and it would be helpful to have a wider tutorial of different things you can do with the pictures, such as positioning, size, text wrap, borders, etc.</p>
-<p>How to imbed animations</p>
-<p>– same as anything!! – well … what kind of animations?</p>
-<p>Some basic CSS code would be great – how to change things in the theme templates, like font, color, etc.</p>
+<div id="html-and-images" class="section level2">
+<h2>HTML and images</h2>
+<p>Rmd has syntax for embedding images, and this works for several image types. Here’s code for a gif, and the result.</p>
+<pre class="r"><code>![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)</code></pre>
+<p>This only gets you so far in terms of customization. I generally use HTML for anything fancier than this. For example, this is the code I used to embed Ted in the <a href="about.html">about page</a>:</p>
 <pre class="html"><code>&lt;img src=&quot;images/ted.jpg&quot; style=&quot;width:35%; border:10px solid; margin-left: 20px&quot; align=&quot;right&quot;&gt;</code></pre>
+<p>This has both the usual image stuff, and some styling on top of that.</p>
+</div>
+<div id="styling" class="section level2">
+<h2>Styling</h2>
+<p>The bit about styling gives a hint about how HTML / CSS work. HTML tags have attributes that modify the default behavior; the <code>style</code> attribute is something that gets a lot of attention. You can see (and modify) this in the <code>&lt;img&gt;</code> tag, but all the other HTML stuff on a page has styling, too.</p>
+<p>You have some options in modifying style attributes:</p>
+<ul>
+<li>Modify a specific tag</li>
+<li>Add CSS in the page header</li>
+<li>Add CSS to the site</li>
+</ul>
+<p>“CSS” is cascading style sheets – the style in a site gets overruled by style in a page-specific CSS, and the page specific gets overruled by styling in a tag.</p>
+</div>
+<div id="create-and-add-a-css-file" class="section level2">
+<h2>Create and add a CSS file</h2>
+<p>First you need to know what elements of the default style you want to overrule. Common things are:</p>
+<ul>
+<li>Font sizes / colors, especially in headers</li>
+<li>Major color choices (navbar, links, etc)</li>
+<li>Other things you liked on someone’s website</li>
+</ul>
+<p>This is another area where stealing is common.</p>
+<p>An example style sheet is below.</p>
+<pre class="css"><code>.navbar-default {
+    background-color: #1D4F91!important;
+    border-color: #1D4F91;
+
+}
+
+.navbar-nav li a:hover, .navbar-nav &gt; .active &gt; a {
+  background-color: #0077C8 !important; 
+  text-decoration: none;
+}
+
+h1 {
+  color: #1D4F91
+    font-size: 32px;
+
+}
+
+h2 {
+  color: #1D4F91
+}
+
+h3 {
+  color: #1D4F91
+    font-size: 20px;
+  font-style: italic;
+  font-weight: 100;
+}
+
+h4 {
+  color: #1D4F91
+}
+
+h5 {
+  color: #75787B
+}</code></pre>
+<p>Let’s say you’ve saved this as <code>styles.css</code>. You can include the style sheet by modifying the site (or page, I guess) YML to include:</p>
+<pre class="yaml"><code>output:
+  html_document:
+    css: style.css</code></pre>
+<p>Note: I can also just add this to a page in a <code>{css}</code> chunk, and it will apply to that page.</p>
+</div>
+<div id="linking-to-an-external-style-sheet" class="section level2">
+<h2>Linking to an external style sheet</h2>
+<p>Typically, the style sheets you want to use are “local” – there’s a local bootswatch theme you want to use, and maybe a style sheet to layer on top of that. Sometimes you want to draw on something else, though – my personal website uses the some of the fontawesome styling. To do that, I used two steps:</p>
+<ul>
+<li>create a <code>header.html</code> file that contains code to link to these sheets</li>
+<li>add the header to my site via <code>_site.yml</code>.</li>
+</ul>
+<p>The <code>header.html</code> file contains the lines:</p>
+<pre class="html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css&quot; /&gt;
+&lt;script defer src=&quot;https://use.fontawesome.com/releases/v5.0.3/js/all.js&quot;&gt;&lt;/script&gt;
+&lt;script defer src=&quot;https://use.fontawesome.com/releases/v5.0.0/js/v4-shims.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>And the <code>_site.yml</code> includes:</p>
+<pre class="yml"><code>output:
+  html_document:
+    include:
+      in_header: header.html</code></pre>
+</div>
+<div id="example" class="section level2">
+<h2>Example</h2>
 <p><a href="https://marianthi.github.io/makLAB.github.io/" class="uri">https://marianthi.github.io/makLAB.github.io/</a></p>
+</div>
 
 
 

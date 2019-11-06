@@ -2,21 +2,123 @@
 title: "HTML and CSS"
 ---
 
+## HTML and images
 
+Rmd has syntax for embedding images, and this works for several image types. Here's code for a gif, and the result. 
 
-Information/examples of how to better incorporate images into our websites. In Data Science we learned a little bit of this, but it was very simplified, and it would be helpful to have a wider tutorial of different things you can do with the pictures, such as positioning, size, text wrap, borders, etc.
+```{r, eval = FALSE}
+![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+```
 
-How to imbed animations
-
--- same as anything!!
--- well ... what kind of animations?
-
-Some basic CSS code would be great – how to change things in the theme templates, like font, color, etc.
+This only gets you so far in terms of customization. I generally use HTML for anything fancier than this. For example, this is the code I used to embed Ted in the [about page](about.html):
 
 
 ```{html}
 <img src="images/ted.jpg" style="width:35%; border:10px solid; margin-left: 20px" align="right">
 ```
 
+This has both the usual image stuff, and some styling on top of that. 
+
+## Styling
+
+The bit about styling gives a hint about how HTML / CSS work. HTML tags have attributes that modify the default behavior; the `style` attribute is something that gets a lot of attention. You can see (and modify) this in the `<img>` tag, but all the other HTML stuff on a page has styling, too. 
+
+You have some options in modifying style attributes:
+
+* Modify a specific tag
+* Add CSS in the page header
+* Add CSS to the site
+
+"CSS" is cascading style sheets -- the style in a site gets overruled by style in a page-specific CSS, and the page specific gets overruled by styling in a tag. 
+
+
+## Create and add a CSS file
+
+First you need to know what elements of the default style you want to overrule. Common things are:
+
+* Font sizes / colors, especially in headers
+* Major color choices (navbar, links, etc)
+* Other things you liked on someone's website
+
+This is another area where stealing is common. 
+
+An example style sheet is below.
+
+```{css, eval = FALSE}
+.navbar-default {
+    background-color: #1D4F91!important;
+    border-color: #1D4F91;
+
+}
+
+.navbar-nav li a:hover, .navbar-nav > .active > a {
+  background-color: #0077C8 !important; 
+  text-decoration: none;
+}
+
+h1 {
+  color: #1D4F91
+	font-size: 32px;
+
+}
+
+h2 {
+  color: #1D4F91
+}
+
+h3 {
+  color: #1D4F91
+	font-size: 20px;
+  font-style: italic;
+  font-weight: 100;
+}
+
+h4 {
+  color: #1D4F91
+}
+
+h5 {
+  color: #75787B
+}
+```
+
+Let's say you've saved this as `styles.css`. You can include the style sheet by modifying the site (or page, I guess) YML to include:
+
+```{yaml}
+output:
+  html_document:
+    css: style.css
+```
+
+Note: I can also just add this to a page in a `{css}` chunk, and it will apply to that page.
+
+
+## Linking to an external style sheet
+
+Typically, the style sheets you want to use are "local" -- there's a local bootswatch theme you want to use, and maybe a style sheet to layer on top of that. Sometimes you want to draw on something else, though -- my personal website uses the some of the fontawesome styling. To do that, I used two steps:
+
+* create a `header.html` file that contains code to link to these sheets
+* add the header to my site via `_site.yml`.
+
+The `header.html` file contains the lines:
+
+```{html}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.0/js/v4-shims.js"></script>
+```
+
+And the `_site.yml` includes:
+
+```{yml}
+output:
+  html_document:
+    include:
+      in_header: header.html
+```
+
+
+## Example
 
 https://marianthi.github.io/makLAB.github.io/
+
